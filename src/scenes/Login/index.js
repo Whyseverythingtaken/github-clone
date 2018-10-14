@@ -1,22 +1,26 @@
 /**
  * Login
+ * 
+ * Fetches the token and saves it in the redux store
  */
 
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { Redirect } from 'react-router-dom';
 import qs from 'qs';
 
 // Actions
-import { authenticate } from '../../../../services/authentication/actions';
+import { authenticate } from '../../services/authentication/actions';
 
 // Selectors
-import { selectToken } from '../../../../services/authentication/selectors';
+import { selectToken } from '../../services/authentication/selectors';
+
 // Environment
 import {
   GITHUB_OAUTH_CLIENT_ID,
   GITHUB_OAUTH_URL
-} from '../../../../config';
+} from '../../config';
 
 const redirect_uri = 'http://localhost:3000'
 
@@ -47,7 +51,8 @@ class Login extends React.PureComponent {
         </a>
       );
     }
-    return null;
+    
+    return <Redirect to="/Home" />;
   }
 }
 

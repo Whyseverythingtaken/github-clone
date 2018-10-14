@@ -5,13 +5,13 @@
 import React, { Component } from 'react';
 // import { BrowserRouter, Route } from 'react-router-dom';
 
-import Login from './components/Login';
+import ProfileImage from './components/ProfileImage';
 
 class Home extends Component {
   render() {
     return (
       <div>
-        <Login />
+        <ProfileImage />
       </div>
     );
   }
