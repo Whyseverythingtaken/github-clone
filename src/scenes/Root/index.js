@@ -4,16 +4,32 @@
 
 import React from 'react';
 import { Route } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 // Scenes
 import Login from '../Login';
 import Home from '../Home';
 
-const Root = () => (
+// Styles
+import styles from './styles';
+
+import GithubLogo from './GithubLogo';
+
+const Root = ({ classes }) => (
   <div>
-    <Login />
-    <Route path="/Home" component={Home} />
+    <AppBar className={classes.appbar}>
+      <Toolbar>
+        <GithubLogo />
+        <Login />
+      </Toolbar>
+    </AppBar>
+    <div className={classes.container}>
+      <Route path="/Home" component={Home} />
+    </div>
   </div>
 );
 
-export default Root;
+export default withStyles(styles)(Root);

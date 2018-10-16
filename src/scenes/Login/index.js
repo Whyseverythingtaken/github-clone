@@ -8,6 +8,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Redirect } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import qs from 'qs';
 
 // Actions
@@ -46,9 +47,9 @@ class Login extends React.PureComponent {
     const href = `${GITHUB_OAUTH_URL}?${queryString}`;
     if (!loggedin) {
       return (
-        <a href={href}>
+        <Button variant="contained" color="primary" href={href}>
           Login
-        </a>
+        </Button>
       );
     }
     
