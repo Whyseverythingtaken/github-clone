@@ -1,5 +1,6 @@
 {
   "name": "github-clone",
+  "description": "A GitHub clone written using React, Redux, GraphQL and MaterialUI",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
