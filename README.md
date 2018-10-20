@@ -6,8 +6,10 @@ A GitHub clone that displays your repositories and allows you to star/unstar and
 
 # Installation
 
-To run it on your local machine clone the repository first and run the following commands.
+To run it on your local machine clone the repository, `cd` into it and run the following commands.
 
-`yarn install`
-`yarn start`
+```
+yarn install
+yarn start
+```
 
