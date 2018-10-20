@@ -6,7 +6,9 @@ Written using React, Redux, GraphQL and MaterialUI
 
 # Installation
 
-To run it on your local machine clone the repository first and run the following commands.
+To run it on your local machine clone the repository first, `cd` into it and run the following commands.
 
-`yarn install`
-`yarn start`
+```
+yarn install
+yarn start
+```
