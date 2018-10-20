@@ -7,7 +7,7 @@ import {
   AUTHENTICATION_ERROR
 } from './constants';
 
-export function authenticate(code) {
+export function requestToken(code) {
   return {
     type: AUTHENTICATE,
     code

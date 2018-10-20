@@ -3,31 +3,43 @@
  */
 
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
+// Components
+import LoginButton from './components/LoginButton';
+import AuthenticationGate from './components/AuthenticationGate';
+import GithubLogo from './components/GithubLogo';
+
 // Scenes
-import Login from '../Login';
 import Home from '../Home';
+import Repository from '../Repository';
 
 // Styles
 import styles from './styles';
 
-import GithubLogo from './GithubLogo';
-
-const Root = ({ classes }) => (
+const Root = ({ classes, token }) => (
   <div>
     <AppBar className={classes.appbar}>
-      <Toolbar>
-        <GithubLogo />
-        <Login />
+      <Toolbar className={classes.toolbar}>
+        <Link to="/home">
+          <GithubLogo />
+        </Link>
+        <LoginButton />
       </Toolbar>
     </AppBar>
-    <div className={classes.container}>
-      <Route path="/Home" component={Home} />
-    </div>
+    <AuthenticationGate>
+      <div className={classes.container}>
+        <Switch>
+          <Redirect exact from="/" to="/home" />
+          <Route path="/home" component={Home} />
+          <Route path="/repository" component={Repository} />
+          <Redirect from="/*" to="/home" />
+        </Switch>
+      </div>
+    </AuthenticationGate>
   </div>
 );
 

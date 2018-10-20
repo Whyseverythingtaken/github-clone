@@ -27,8 +27,8 @@ export function* authenticate({ code }) {
     if (response.data.error) {
       throw new Error(response.data.error);
     }
-
-    yield put(authenticationSuccess(response.data));
+    localStorage.setItem('github_token', response.data.token); // set token in local storage
+    yield put(authenticationSuccess(response.data)); // set token in redux state
   } catch (error) {
     console.log(error);
     yield put(authenticationError(error.message));

@@ -2,6 +2,9 @@ const styles = theme => ({
   appbar: {
     backgroundColor: '#24292e',
   },
+  toolbar: {
+    paddingLeft: 57,
+  },
   title: {
     flexGrow: 1,
     color: '#fff'

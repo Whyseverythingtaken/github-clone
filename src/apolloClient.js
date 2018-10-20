@@ -1,8 +1,9 @@
 import ApolloClient from "apollo-boost";
 
-const createClient = token => new ApolloClient({
+const createClient = new ApolloClient({
   uri: "https://api.github.com/graphql",
   request: operation => {
+    const token = localStorage.getItem("github_token");
     if (token) {
       operation.setContext({
         headers: {

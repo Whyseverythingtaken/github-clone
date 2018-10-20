@@ -21,13 +21,10 @@ const reducer = persistReducer(config, rootReducer);
 
 // redux devtools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 const store = createStore(reducer, composeEnhancers(
   applyMiddleware(sagaMiddleware)
 ));
-
 sagaMiddleware.run(rootSaga);
-
 const persistor = persistStore(store);
 
 export { persistor, store };
