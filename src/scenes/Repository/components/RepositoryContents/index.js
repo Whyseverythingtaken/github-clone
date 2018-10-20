@@ -12,8 +12,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 
 // Icons
-import IconFile from './IconFile';
-import IconFolder from './IconFolder';
+import IconFile from './components/IconFile';
+import IconFolder from './components/IconFolder';
 
 // Styles
 import styles from './styles';

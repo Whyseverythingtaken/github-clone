@@ -19,7 +19,6 @@ import {
 } from '../../config';
 
 export function* loadRepositoryContents({ payload: { user, repo }}) {
-  console.log('here', user);
   const token = yield select(selectToken);
   const config = {
     method: 'get',

@@ -7,6 +7,7 @@ import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Grid from '@material-ui/core/Grid';
 
 // Components
 import LoginButton from './components/LoginButton';
@@ -24,10 +25,16 @@ const Root = ({ classes, token }) => (
   <div>
     <AppBar className={classes.appbar}>
       <Toolbar className={classes.toolbar}>
-        <Link to="/home">
-          <GithubLogo />
-        </Link>
-        <LoginButton />
+      <Grid container direction="row" justify="space-between">
+        <Grid item>
+          <Link to="/home">
+            <GithubLogo />
+          </Link>
+        </Grid>
+        <Grid item>
+          <LoginButton />
+        </Grid>
+      </Grid>
       </Toolbar>
     </AppBar>
     <AuthenticationGate>

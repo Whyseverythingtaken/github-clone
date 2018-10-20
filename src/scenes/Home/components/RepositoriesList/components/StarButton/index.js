@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles';
 
-import StarIcon from './StarIcon';
+import StarIcon from '../StarIcon';
 import styles from './styles';
 
 class StarButton extends React.PureComponent {

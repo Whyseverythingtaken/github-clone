@@ -3,7 +3,8 @@ const styles = theme => ({
     backgroundColor: '#24292e',
   },
   toolbar: {
-    paddingLeft: 57,
+    paddingLeft: 40,
+    paddingRight: 40
   },
   title: {
     flexGrow: 1,
