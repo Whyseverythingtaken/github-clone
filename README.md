@@ -10,5 +10,3 @@ To run it on your local machine clone the repository first and run the following
 
 `yarn install`
 `yarn start`
-
-Alternatively you can view the website live using the CodeSandbox link in the discription above :point_up:
