@@ -17,7 +17,7 @@ import {
   GITHUB_OAUTH_URL
 } from '../../../../config';
 
-const redirect_uri = 'http://localhost:3000'
+const redirect_uri = location.origin; //eslint-disable-line
 
 class LoginButton extends React.PureComponent {
   render() {
