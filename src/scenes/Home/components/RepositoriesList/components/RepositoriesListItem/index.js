@@ -30,7 +30,7 @@ const RepositoriesListItem = ({
         <Link className={classes.link} to={`/repository?${query}`}>
           {name}
         </Link>
-        <Typography className={classes.typography}>
+        <Typography className={classes.typography} noWrap>
           {description}
         </Typography>
         <StarButton {...props} />

@@ -5,7 +5,8 @@ const styles = theme => ({
   paper: {
     padding: 15,
     height: 100,
-    border: '1px solid #ddd'
+    border: '1px solid #ddd',
+    position: 'relative'
   },
   link: {
     fontWeight: 600,
