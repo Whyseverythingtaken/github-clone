@@ -53,11 +53,11 @@ export default compose(
             proxy.writeFragment({
               id: `Repository:${starrableId}`,
               fragment: gql`
-                fragment repository on Repository {
+                fragment repositoryStar on Repository {
                   viewerHasStarred
                 }
               `,
-              data: { viewerHasStarred: true }
+              data: { viewerHasStarred: true, __typename: "Repository" }
             });
           }
         })
@@ -72,11 +72,11 @@ export default compose(
             proxy.writeFragment({
               id: `Repository:${starrableId}`,
               fragment: gql`
-                fragment repository on Repository {
+                fragment repositoryStar on Repository {
                   viewerHasStarred
                 }
               `,
-              data: { viewerHasStarred: false }
+              data: { viewerHasStarred: false, __typename: "Repository" }
             });
           }
         })
@@ -91,11 +91,11 @@ export default compose(
             proxy.writeFragment({
               id: `Repository:${subscribableId}`,
               fragment: gql`
-                fragment repository on Repository {
+                fragment repositorySubscription on Repository {
                   viewerSubscription
                 }
               `,
-              data: { viewerSubscription: state }
+              data: { viewerSubscription: state, __typename: "Repository" }
             });
           }
         })
